@@ -1,0 +1,45 @@
+## ================= Dynamic Templates ==================
+## Reference: https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-templates.html
+##
+## Default template:
+## - data:
+##     match_mapping_type: string
+##     mapping:
+##         type: text
+##         analyzer: iq_text_base
+##         index_options: freqs
+##         fields:
+##             stem:
+##                 type: text
+##                 analyzer: iq_text_stem
+##             prefix:
+##                 type: text
+##                 analyzer: i_prefix
+##                 search_analyzer: q_prefix
+##                 index_options: docs
+##             delimiter:
+##                 type: text
+##                 analyzer: iq_text_delimiter
+##                 index_options: freqs
+##             joined:
+##                 type: text
+##                 analyzer: i_text_bigram
+##                 search_analyzer: q_text_bigram
+##                 index_options: freqs
+##             enum:
+##                 type: keyword
+##                 ignore_above: 2048
+##
+##- <user defined template name>:
+##    match_mapping_type: <JSON data type>
+##    match_pattern: regex # optional, default accept only simple wildcard
+##    match: <patterns to match on the field name> # optional
+##    unmatch: <patterns to unmatch on the field name> # optional
+##    mapping:
+##        type: # https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html
+- data:
+    match_mapping_type: string
+    mapping:
+        type: text
+        analyzer: ik_max_word
+        search_analyzer: ik_smart
