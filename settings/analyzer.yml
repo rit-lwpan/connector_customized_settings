@@ -1,0 +1,10 @@
+## ================= Customized Analyzer ==================
+## Reference: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-custom-analyzer.html
+## Add customized analyzer for text field used
+## If add customized analyzer here, need to modify
+#<user defined analyzer name>:
+#    type:
+#    tokenizer: # required
+#    char_filter: 
+#    filter:
+#    position_increment_gap:
