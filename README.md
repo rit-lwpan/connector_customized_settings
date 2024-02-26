@@ -6,11 +6,11 @@
 
 ## setting.py
 增加自訂dynamic_templates跟analyzer的功能
-原始檔為[connectors/es/settings.py](https://github.com/elastic/connectors/blob/v8.11.3.0/connectors/es/settings.py)
+原始檔為[connectors/es/settings.py](https://github.com/elastic/connectors/blob/v8.12.1.0/connectors/es/settings.py)
 
 ## connectors/customized-settings image
 image檔案置於: https://drive.google.com/drive/folders/1gpdCn6bMQ-lrM33IggCpRgIZ5LjBq8t2?usp=sharing
 ### load docker image
 ```
-gunzip -c connectors_customized-settings_8.11.3.0.tgz | docker load
+gunzip -c connectors_customized-settings_8.12.1.0.tgz | docker load
 ```
